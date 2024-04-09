@@ -3,14 +3,15 @@ using UnityEngine;
 using TMPro;
 using System;
 
+[RequireComponent(typeof(TextMeshProUGUI))]
 public class Counter : MonoBehaviour
 {
-    public Action<bool> Clicked;
-
     [SerializeField] private float _delay = 0.5f;
     [SerializeField] private int _stepValue = 1;
 
-    TextMeshProUGUI _textMeshPro;
+    public event Action<bool> Clicked;
+
+    private TextMeshProUGUI _textMeshPro;
     private Coroutine _coroutine;
     private int _counter;
 

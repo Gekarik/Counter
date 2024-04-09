@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class ColorToggler : MonoBehaviour
 {
     [SerializeField] private Counter _counter;
